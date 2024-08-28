@@ -1,0 +1,65 @@
+//hello world programe
+import java.util.Random;
+import java.util.Scanner;
+
+public class Rock_Paper_Seassor_Game {
+    public static void main(String[] args) {
+        for (int i=0;i<500;i++) {
+        System.out.println("0 = rock");
+        System.out.println("1 = paper");
+        System.out.println("2 = sessor");
+
+        //Taking input from the user
+
+            Scanner sc = new Scanner(System.in);
+            System.out.println("ENTER YOUR NUMBER");
+            int a = sc.nextInt();
+
+
+            //Taking randum guess from the computer
+            Random randum = new Random();
+            int randumint = randum.nextInt(3);
+            System.out.println("computers guess " + randumint);
+
+
+            // assinged numbers to the corresponding strings
+            int number = 0;
+            String rock = String.valueOf(number);
+            System.out.println(rock + " rock");
+
+            int number1 = 1;
+            String paper = String.valueOf(number1);
+            System.out.println(paper + " paper");
+
+            int number2 = 2;
+            String sessor = String.valueOf(number2);
+            System.out.println(sessor + " sessor");
+
+
+            //make the condition who will won and who will lose
+            if (a == 0 && randumint == 1) {
+                System.out.println("paper won");
+            } else if (a == 0 && randumint == 2) {
+                System.out.println("rock won");
+            } else if (a == 0 && randumint == 0) {
+                System.out.println("match tie");
+            }
+
+            if (a == 1 && randumint == 1) {
+                System.out.println("match tie");
+            } else if (a == 1 && randumint == 2) {
+                System.out.println("sessor won");
+            } else if (a == 1 && randumint == 0) {
+                System.out.println("paper won");
+            }
+
+            if (a == 2 && randumint == 1) {
+                System.out.println("sessor won");
+            } else if (a == 2 && randumint == 2) {
+                System.out.println("match tie");
+            } else if (a == 2 && randumint == 0) {
+                System.out.println("rock won");
+            }
+        }
+    }
+}
